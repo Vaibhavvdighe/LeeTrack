@@ -1,0 +1,153 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background: url("bg.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg");
+    background-size: cover;
+    filter: blur(5px);
+    filter: brightness(-10px);
+    z-index: -1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.headline {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-left: none;
+    height: 40px;
+}
+
+h1{
+    color: rgb(255, 170, 42);
+    width: 80%;
+}
+
+h2{
+    color: red;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.user-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    width: 70%;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size:15px;
+    font-weight: 400;
+}
+
+button {
+    border-radius: 5px;
+    padding: 0.4rem;
+    min-width: 25%;
+    width: 25%;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:black ;
+    color: aliceblue;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stats-container {
+    display: none;
+}
+
+
+.progress {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    width: 45%;
+    height: 50px;
+    background-color: rgb(228, 134, 39);
+    color: #212121;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.stats-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.progress-easy {
+    background: conic-gradient(green var(--progress-degree, 0%), rgb(1, 40, 1) 0%);
+}
+
+.progress-medium {
+    background: conic-gradient(#ffd800 var(--progress-degree, 0%), rgb(77, 60, 0) 0%);
+}
+
+.progress-hard {
+    background: conic-gradient(#cc3023 var(--progress-degree, 0%), rgb(40, 1, 1) 0%);
+}
+
+
